@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxs26jqfljreb"]
+
+[ext_resource type="Texture2D" uid="uid://dlf18ulvw00ul" path="res://art/v2/background/far.png" id="1_y0upk"]
+[ext_resource type="Texture2D" uid="uid://hpftpu7gvk0y" path="res://art/v2/background/foregound-merged.png" id="2_jougr"]
+
+[node name="Background" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_top = 1.0
+offset_right = 256.0
+offset_bottom = 193.0
+scale = Vector2(1.89, 3.8)
+texture = ExtResource("1_y0upk")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = -403.0
+offset_top = 156.0
+offset_right = 109.0
+offset_bottom = 348.0
+scale = Vector2(3, 3)
+texture = ExtResource("2_jougr")

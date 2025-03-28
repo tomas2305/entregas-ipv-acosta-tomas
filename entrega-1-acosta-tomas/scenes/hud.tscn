@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://ci1cdsdph4peh"]
 
-[ext_resource type="Script" uid="uid://ccm6upqai10sq" path="res://hud.gd" id="1_sr4q8"]
-[ext_resource type="FontFile" uid="uid://deyfoa5ot4oue" path="res://fonts/Xolonium-Regular.ttf" id="2_bg4xv"]
+[ext_resource type="Script" uid="uid://ccm6upqai10sq" path="res://scripts/hud.gd" id="1_sr4q8"]
+[ext_resource type="FontFile" uid="uid://bhqpjoclbeutf" path="res://fonts/vcr_osd_mono/VCR_OSD_MONO_1.001.ttf" id="2_oo0fn"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_3cyv2"]
 action = &"start_game"
@@ -16,11 +16,12 @@ script = ExtResource("1_sr4q8")
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -240.0
-offset_right = 240.0
-offset_bottom = 78.0
+offset_left = -238.0
+offset_top = -1.0
+offset_right = 242.0
+offset_bottom = 77.0
 grow_horizontal = 2
-theme_override_fonts/font = ExtResource("2_bg4xv")
+theme_override_fonts/font = ExtResource("2_oo0fn")
 theme_override_font_sizes/font_size = 64
 text = "0"
 horizontal_alignment = 1
@@ -38,7 +39,7 @@ offset_right = 240.0
 offset_bottom = 79.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("2_bg4xv")
+theme_override_fonts/font = ExtResource("2_oo0fn")
 theme_override_font_sizes/font_size = 64
 text = "Dodge the Creeps!"
 horizontal_alignment = 1
@@ -57,7 +58,7 @@ offset_right = 100.0
 offset_bottom = -40.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_fonts/font = ExtResource("2_bg4xv")
+theme_override_fonts/font = ExtResource("2_oo0fn")
 theme_override_font_sizes/font_size = 64
 shortcut = SubResource("Shortcut_e47qy")
 text = "Start"
