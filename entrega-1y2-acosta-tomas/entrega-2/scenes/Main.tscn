@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bf4jlipm3a54m"]
+[gd_scene load_steps=7 format=3 uid="uid://bf4jlipm3a54m"]
 
 [ext_resource type="Texture2D" uid="uid://cgh04c6s4y58g" path="res://assets/background.png" id="1_0bbpv"]
 [ext_resource type="Script" uid="uid://lo130fapummo" path="res://scripts/main.gd" id="1_rarhs"]
@@ -6,10 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://pcwnqa4mwuts" path="res://scenes/Player.tscn" id="3_vcsgt"]
 [ext_resource type="Texture2D" uid="uid://u266nmexfkef" path="res://assets/floor.png" id="4_vcsgt"]
 [ext_resource type="PackedScene" uid="uid://dta13rad8ymjs" path="res://scenes/Turret.tscn" id="6_c01mt"]
-[ext_resource type="PackedScene" uid="uid://b3tjtm8ij0ntb" path="res://scenes/ProjectileTurret.tscn" id="7_nxtc6"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_rarhs")
+turret_scene = ExtResource("6_c01mt")
 
 [node name="Background" type="TextureRect" parent="."]
 offset_left = -4.0
@@ -28,7 +28,3 @@ texture = ExtResource("4_vcsgt")
 
 [node name="Player" parent="." instance=ExtResource("3_vcsgt")]
 position = Vector2(570, 431)
-
-[node name="Turret" parent="." instance=ExtResource("6_c01mt")]
-position = Vector2(349, 216)
-projectile_scene = ExtResource("7_nxtc6")
