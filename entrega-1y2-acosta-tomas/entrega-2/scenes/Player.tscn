@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bmm8es24sy2ao" path="res://scenes/Projectile.tscn" id="5_qu4a1"]
 
 [node name="Player" type="Sprite2D"]
+position = Vector2(-1, 0)
 texture = ExtResource("1_3vyb7")
 script = ExtResource("1_g2els")
 speed = 600.0
