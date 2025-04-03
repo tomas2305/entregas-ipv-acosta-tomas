@@ -1,0 +1,33 @@
+[gd_scene load_steps=8 format=3 uid="uid://bf4jlipm3a54m"]
+
+[ext_resource type="Texture2D" uid="uid://cgh04c6s4y58g" path="res://assets/background.png" id="1_0bbpv"]
+[ext_resource type="Script" uid="uid://lo130fapummo" path="res://scripts/main.gd" id="1_rarhs"]
+[ext_resource type="Script" uid="uid://cwjyqrm2qqrhv" path="res://scripts/background.gd" id="2_rarhs"]
+[ext_resource type="PackedScene" uid="uid://pcwnqa4mwuts" path="res://scenes/Player.tscn" id="3_vcsgt"]
+[ext_resource type="Texture2D" uid="uid://u266nmexfkef" path="res://assets/floor.png" id="4_vcsgt"]
+[ext_resource type="PackedScene" uid="uid://dta13rad8ymjs" path="res://scenes/Turret.tscn" id="6_c01mt"]
+[ext_resource type="PackedScene" uid="uid://cah7cocg2eot1" path="res://scenes/Killzone.tscn" id="7_nxtc6"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_rarhs")
+turret_scene = ExtResource("6_c01mt")
+
+[node name="Killzone" parent="." instance=ExtResource("7_nxtc6")]
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = -10.0
+offset_top = -23.0
+offset_right = 1144.0
+offset_bottom = 577.0
+texture = ExtResource("1_0bbpv")
+script = ExtResource("2_rarhs")
+
+[node name="Floor" type="TextureRect" parent="."]
+offset_left = -2.0
+offset_top = 463.0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("4_vcsgt")
+
+[node name="Player" parent="." instance=ExtResource("3_vcsgt")]
+position = Vector2(570, 431)
