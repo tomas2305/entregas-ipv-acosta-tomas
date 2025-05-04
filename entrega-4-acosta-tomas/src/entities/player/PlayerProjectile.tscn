@@ -1,0 +1,264 @@
+[gd_scene load_steps=28 format=3 uid="uid://cccfoe3j0egr"]
+
+[ext_resource type="Script" uid="uid://vg16bfqm3qb7" path="res://src/entities/Projectile.gd" id="1_7l84f"]
+[ext_resource type="Texture2D" uid="uid://f3ns4n37wisi" path="res://assets/textures/fx/spark/spark-preview1.png" id="2_sqwf7"]
+[ext_resource type="Texture2D" uid="uid://cec11lyi13owe" path="res://assets/textures/fx/spark/spark-preview2.png" id="3_16v1e"]
+[ext_resource type="Texture2D" uid="uid://cq1xwm60wqkp5" path="res://assets/textures/fx/spark/spark-preview3.png" id="4_l7p5i"]
+[ext_resource type="Texture2D" uid="uid://c03wpk831v65f" path="res://assets/textures/fx/spark/spark-preview4.png" id="5_x0nsa"]
+[ext_resource type="Texture2D" uid="uid://ca2ndl14ihpus" path="res://assets/textures/fx/spark/spark-preview5.png" id="6_ohpj4"]
+[ext_resource type="Texture2D" uid="uid://c54agwf4cyc7j" path="res://assets/textures/fx/hits/hits-4/hits-4-1.png" id="7_8hrer"]
+[ext_resource type="Texture2D" uid="uid://cn1vtdt8nfoya" path="res://assets/textures/fx/hits/hits-4/hits-4-2.png" id="8_enq2l"]
+[ext_resource type="Texture2D" uid="uid://bcbj67du36oaj" path="res://assets/textures/fx/hits/hits-4/hits-4-3.png" id="9_5db4q"]
+[ext_resource type="Texture2D" uid="uid://c8i1ro836q1x" path="res://assets/textures/fx/hits/hits-4/hits-4-4.png" id="10_m0br2"]
+[ext_resource type="Texture2D" uid="uid://do6t1lii2h07y" path="res://assets/textures/fx/hits/hits-4/hits-4-5.png" id="11_xslqj"]
+[ext_resource type="Texture2D" uid="uid://cxhfladhr05k5" path="res://assets/textures/fx/hits/hits-4/hits-4-6.png" id="12_8utj8"]
+[ext_resource type="Texture2D" uid="uid://dtghjv6rkysah" path="res://assets/textures/fx/hits/hits-4/hits-4-7.png" id="13_eorws"]
+[ext_resource type="Texture2D" uid="uid://b53hcrr65c4of" path="res://assets/textures/fx/hits/hits-2/hits-2-1.png" id="14_5db4q"]
+[ext_resource type="Texture2D" uid="uid://5w1xvso8i76l" path="res://assets/textures/fx/hits/hits-2/hits-2-2.png" id="15_m0br2"]
+[ext_resource type="Texture2D" uid="uid://5328o31ay8ma" path="res://assets/textures/fx/hits/hits-2/hits-2-3.png" id="16_xslqj"]
+[ext_resource type="Texture2D" uid="uid://opgs7dq3w3r0" path="res://assets/textures/fx/hits/hits-2/hits-2-4.png" id="17_8utj8"]
+[ext_resource type="Texture2D" uid="uid://chep16p0y5pxy" path="res://assets/textures/fx/hits/hits-2/hits-2-5.png" id="18_eorws"]
+[ext_resource type="Texture2D" uid="uid://dcjw683rbj7m8" path="res://assets/textures/fx/hits/hits-2/hits-2-6.png" id="19_ahk78"]
+[ext_resource type="Texture2D" uid="uid://ufu6qn3iycv1" path="res://assets/textures/fx/hits/hits-2/hits-2-7.png" id="20_xeius"]
+
+[sub_resource type="Animation" id="Animation_5db4q"]
+resource_name = "fire_start"
+length = 0.2136
+step = 0.03
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"fire_start"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.00192394, 0.030303, 0.0606061, 0.0909091, 0.121212, 0.151515, 0.181818),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.121212),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [false],
+"method": &"set_physics_process"
+}, {
+"args": [true],
+"method": &"set_physics_process"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_m0br2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_xslqj"]
+resource_name = "fire_loop"
+length = 0.6
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"fire_loop"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 4]
+}
+
+[sub_resource type="Animation" id="Animation_8utj8"]
+resource_name = "hit"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"hit"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_remove"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eorws"]
+_data = {
+&"RESET": SubResource("Animation_m0br2"),
+&"fire_loop": SubResource("Animation_xslqj"),
+&"fire_start": SubResource("Animation_5db4q"),
+&"hit": SubResource("Animation_8utj8")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4f5x2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_sqwf7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_16v1e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_l7p5i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_x0nsa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ohpj4")
+}],
+"loop": true,
+"name": &"fire_loop",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_8hrer")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_enq2l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_5db4q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_m0br2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_xslqj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_8utj8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_eorws")
+}],
+"loop": false,
+"name": &"fire_start",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": ExtResource("14_5db4q")
+}, {
+"duration": 0.5,
+"texture": ExtResource("15_m0br2")
+}, {
+"duration": 0.5,
+"texture": ExtResource("16_xslqj")
+}, {
+"duration": 0.5,
+"texture": ExtResource("17_8utj8")
+}, {
+"duration": 0.5,
+"texture": ExtResource("18_eorws")
+}, {
+"duration": 0.5,
+"texture": ExtResource("19_ahk78")
+}, {
+"duration": 0.5,
+"texture": ExtResource("20_xeius")
+}],
+"loop": false,
+"name": &"hit",
+"speed": 20.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k560y"]
+radius = 8.0
+
+[node name="PlayerProjectile" type="Node2D"]
+script = ExtResource("1_7l84f")
+
+[node name="LifetimeTimer" type="Timer" parent="."]
+
+[node name="ProjectileAnimations" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_eorws")
+}
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_4f5x2")
+animation = &"fire_start"
+frame = 1
+
+[node name="Hitbox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("CircleShape2D_k560y")
+
+[connection signal="body_entered" from="Hitbox" to="." method="_on_Hitbox_body_entered"]
