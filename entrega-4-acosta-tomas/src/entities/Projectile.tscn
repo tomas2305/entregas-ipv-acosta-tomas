@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://vg16bfqm3qb7" path="res://src/entities/Projectile.gd" id="1"]
 
+[sub_resource type="Animation" id="Animation_1qn4o"]
+length = 0.001
+
 [sub_resource type="Animation" id="1"]
 resource_name = "fire_loop"
 
@@ -24,9 +27,6 @@ tracks/0/keys = {
 "method": &"_remove"
 }]
 }
-
-[sub_resource type="Animation" id="Animation_1qn4o"]
-length = 0.001
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_n3s4t"]
 _data = {
